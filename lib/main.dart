@@ -3,23 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:localization/pages/localization.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  runApp(
-    EasyLocalization(
-      supportedLocales: const [
-        Locale('en','US'),
-        Locale('fr','FR'),
-        Locale('ru','RU'),
-        Locale('uz','UZ'),
-      ],
-      path:"assets/translations",
-      fallbackLocale: const Locale('en','US'),
-
-      child: const MyApp(),
-    )
-  );
+  runApp(EasyLocalization(
+    supportedLocales: const [
+      Locale('en', 'US'),
+      Locale('ko', 'KR'),
+      Locale('ja', 'JP'),
+      Locale('fr', 'FR'),
+      Locale('ru', 'RU'),
+      Locale('uz', 'UZ'),
+    ],
+    path: "assets/translations",
+    fallbackLocale: const Locale('en', 'US'),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -37,10 +35,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const Localization(),
-      routes: {
-
-      },
+      routes: {},
     );
   }
 }
-

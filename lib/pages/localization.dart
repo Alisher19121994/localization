@@ -40,10 +40,24 @@ class _LocalizationState extends State<Localization> {
                 Expanded(child: OutlinedButton(onPressed: (){
                   context.setLocale(const Locale('uz','UZ'));
                 }, child: const Text("Uzbek"),)),
-                const SizedBox(width: 10,),
+              ],
+            ),
+            const SizedBox(height: 20,),
+            Row(
+              children: [
                 Expanded(child: OutlinedButton(onPressed: (){
                   context.setLocale(const Locale('fr','FR'));
                 }, child: const Text("French"),)),
+
+                const SizedBox(width: 10,),
+                Expanded(child: OutlinedButton(onPressed: (){
+                  context.setLocale(const Locale('ko','KR'));
+                }, child: const Text("Korean"),)),
+
+                const SizedBox(width: 10,),
+                Expanded(child: OutlinedButton(onPressed: (){
+                  context.setLocale(const Locale('ja','JP'));
+                }, child: const Text("Japanese"),)),
               ],
             )
           ],
